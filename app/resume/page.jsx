@@ -13,9 +13,9 @@ import {
 import { SiTailwindcss, SiBootstrap } from "react-icons/si";
 
 const about = {
-  title: "About Me",
+  title: "Informacão Pessoal",
   description:
-    "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.",
+    "sou apaixonado por criar soluções criativas para problemas complexos. Estou sempre buscando maneiras de gerar resultados efetivos e inovadores. Além disso, sou um profissional dedicado, responsável e comprometido em aprender continuamente e evoluir minhas habilidades.",
   info: [
     {
       fieldName: "Name",
@@ -38,55 +38,48 @@ const about = {
 
 const experience = {
   icon: "/assets/resume/badge.svg",
-  title: "My Experience",
-  description:
-    "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.",
+  title: "Minhas Experiencias",
+  description: "Transformando ideias em soluções práticas",
   items: [
     {
       company: "Comeia Labs",
-      position: "Freelancer",
-      duration: "2020 - Atual",
+      position: "Desenvolvedor Front-end",
+      duration: "2024 - Atual",
     },
     {
       company: "EESL - Consultoria",
-      position: "Freelancer",
-      duration: "2020 - Atual",
+      position: "Desenvolvedor Front-end",
+      duration: "2023 - 2024",
     },
   ],
 };
 
 const education = {
   icon: "/assets/resume/cap.svg",
-  title: "My Education",
-  description:
-    "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.",
+  title: "Academico",
+  description: "Minhas Formações",
   items: [
     {
-      instituition: "Freelancer",
-      degree: "Freelancer",
-      duration: "2020 - Atual",
+      instituition: "Comeia Labs",
+      degree: "Full Stack Developer",
+      duration: "2023",
     },
     {
-      instituition: "Freelancer",
-      degree: "Freelancer",
-      duration: "2020 - Atual",
+      instituition: "Onebitcode",
+      degree: "Curso de Desenvolvimento Web",
+      duration: "2023",
     },
     {
-      instituition: "Freelancer",
-      degree: "Freelancer",
-      duration: "2020 - Atual",
-    },
-    {
-      instituition: "Freelancer",
-      degree: "Freelancer",
-      duration: "2020 - Atual",
+      instituition: "Cesrei Faculdade",
+      degree: "Publicidade e Propaganda",
+      duration: "2020",
     },
   ],
 };
 
 const skills = {
-  title: "My Skills",
-  description: "teste.",
+  title: "Minhas Skills",
+  description: "Experiências Praticas.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -149,10 +142,10 @@ const Resume = () => {
       }}
       className='min-h[80vh] flex items-center justify-center py-12 xl:py-0'
     >
-      <div className='container mx-auto'>
+      <div className='container mx-auto mt-40 '>
         <Tabs
           defaultValue='experience'
-          className='flex flex-col xl:flex-row gap-[60px]'
+          className='flex flex-col xl:flex-row gap-[60px] w-full  '
         >
           <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6'>
             <TabsTrigger className='text-white' value='experience'>
@@ -185,7 +178,7 @@ const Resume = () => {
                           className='bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg-items-start gap-1'
                         >
                           <span className='text-accent'>{item.duration}</span>
-                          <h3 className='text-xl max-w-[260px] min-h-[60px] text-center lg:text-left'>
+                          <h3 className='text-xl  min-h-[60px] text-center lg:text-left'>
                             {item.position}
                           </h3>
                           <div className='flex items-center gap-3'>
@@ -211,10 +204,10 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className='bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg-items-start gap-1'
+                          className='bg-[#232329] h-[184px]  py-6 px-10 rounded-xl flex flex-col justify-center items-center lg-items-start gap-1'
                         >
                           <span className='text-accent'>{item.duration}</span>
-                          <h3 className='text-xl max-w-[260px] min-h-[60px] text-center lg:text-left'>
+                          <h3 className='text-xl  min-h-[60px] text-center lg:text-left'>
                             {item.degree}
                           </h3>
                           <div className='flex items-center gap-3'>
@@ -232,7 +225,7 @@ const Resume = () => {
               <div className='flex flex-col gap-[30px]'>
                 <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                   <h3 className='text-4xl font-bold'>{skills.title}</h3>
-                  <p className='max-w-[600px] mx-auto text-white/60 xl:mx-0'>
+                  <p className='max-w-[600px] mx-auto text-white xl:mx-0'>
                     {skills.description}
                   </p>
                 </div>
@@ -247,7 +240,7 @@ const Resume = () => {
                                 {skill.icon}
                               </div>
                             </TooltipTrigger>
-                            <TooltipContent>
+                            <TooltipContent className='z-50 overflow-hidden rounded-md border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-950 shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50'>
                               <p className='capitalize'>{skill.name}</p>
                             </TooltipContent>
                           </Tooltip>

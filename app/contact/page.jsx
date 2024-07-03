@@ -53,19 +53,18 @@ const Contact = () => {
           {/* form */}
           <div className='xl:w-[54%] order-2 xl:order-none'>
             <form className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl'>
-              <h3 className='text-4xl text-accent'>Let's Work Together</h3>
+              <h3 className='text-4xl text-accent'>Entre em contato</h3>
               <p className='text-white/60'>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, nulla assumenda quidem aperiam expedita at soluta
-                enim sunt ex, quae accusantium ducimus iusto, voluptas
-                asperiores minus. Voluptatum libero et nisi.
+                Para mais informações ou para discutir oportunidades, entre em
+                contato. Estou disponível para responder suas perguntas e
+                discutir como posso colaborar.
               </p>
               {/* input */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                <Input type='firstName' placeholder='First Name' />
-                <Input type='lastName' placeholder='Last Name' />
+                <Input type='firstName' placeholder='Nome' />
+                <Input type='lastName' placeholder='Sobrenome' />
                 <Input type='email' placeholder='Email' />
-                <Input type='phone' placeholder='Phone' />
+                <Input type='phone' placeholder='Telefone' />
               </div>
               {/* textarea */}
               <Textarea

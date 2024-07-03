@@ -5,17 +5,17 @@ const socials = [
   {
     name: "Github",
     icon: <FaGithub />,
-    path: "https://github.com/marcusvinicius-dev",
+    path: "https://github.com/marcusvmota",
   },
   {
     name: "Linkedin",
     icon: <FaLinkedin />,
-    path: "https://www.linkedin.com/in/marcus-vinicius-dev/",
+    path: "https://www.linkedin.com/in/marcus-vinicius-mota/",
   },
   {
     name: "Instagram",
     icon: <FaInstagram />,
-    path: "https://www.instagram.com/marcusvinicius.dev/",
+    path: "https://www.instagram.com/viniciusqmota/",
   },
 ];
 const Social = ({ containerStyles, iconStyles }) => {

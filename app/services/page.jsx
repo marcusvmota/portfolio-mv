@@ -7,30 +7,15 @@ import { BsArrowDownRight } from "react-icons/bs";
 const services = [
   {
     num: "01",
-    title: "Web Development",
-    description:
-      "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.",
+    title: "Software Development",
+    description: "Desenvolvimento de aplicações web e mobile.",
     href: "",
   },
   {
     num: "02",
-    title: "Web Development",
+    title: "UI/UX Design",
     description:
-      "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.",
-    href: "",
-  },
-  {
-    num: "03",
-    title: "Web Development",
-    description:
-      "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.",
-    href: "",
-  },
-  {
-    num: "04",
-    title: "Web Development",
-    description:
-      "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.",
+      "Desenvolvimento de interfaces de usuário e experiências de usuário.",
     href: "",
   },
 ];
@@ -39,7 +24,7 @@ import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <section className='min-h[80vh] flex flex-col justify-center py-12 xl:py-0'>
+    <section className='min-h[80vh] flex flex-col justify-center py-12 xl:py-0 mt-40'>
       <div className='container mx-auto '>
         <motion.div
           initial={{ opacity: 0 }}
