@@ -145,33 +145,24 @@ const Resume = () => {
           ease: "easeIn",
         },
       }}
-      className='min-h[80vh] flex items-center justify-center py-12 xl:py-0'
+      className='min-h[80vh] flex items-center justify-center py-12 xl:py-0 '
     >
       <div className='container mx-auto mt-40 '>
         <Tabs
           defaultValue='experience'
-          className='flex flex-col xl:flex-row gap-[60px] w-full  '
+          className='flex flex-col xl:flex-row gap-[60px] w-full   '
         >
-          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 '>
-            <TabsTrigger
-              className='text-white hover:text-accent  '
-              value='experience'
-            >
+          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6   '>
+            <TabsTrigger className='text-white    ' value='experience'>
               Experiência
             </TabsTrigger>
-            <TabsTrigger
-              className='text-white hover:text-accent'
-              value='education'
-            >
+            <TabsTrigger className='text-white ' value='education'>
               Educação
             </TabsTrigger>
-            <TabsTrigger
-              className='text-white hover:text-accent'
-              value='skills'
-            >
+            <TabsTrigger className='text-white ' value='skills'>
               Habilidades
             </TabsTrigger>
-            <TabsTrigger className='text-white hover:text-accent' value='about'>
+            <TabsTrigger className='text-white' value='about'>
               Informações
             </TabsTrigger>
           </TabsList>
