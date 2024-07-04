@@ -7,7 +7,7 @@ import { BsArrowDownRight } from "react-icons/bs";
 const services = [
   {
     num: "01",
-    title: "Software Development",
+    title: "Desenvolvedor de Software",
     description: "Desenvolvimento de aplicações web e mobile.",
     href: "",
   },
@@ -50,9 +50,9 @@ const Services = () => {
                   </div>
                   <Link
                     href={service.href}
-                    className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex items-center justify-center hover:-rotate-45'
+                    className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex items-center justify-center cursor-default '
                   >
-                    <BsArrowDownRight className='text-3xl text-primary' />
+                    <BsArrowDownRight className='text-3xl text-primary cursor-default' />
                   </Link>
                 </div>
                 <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500'>

@@ -23,4 +23,29 @@
   .text-outline-hover {
     -webkit-text-stroke: 1px #627de0;
   }
+
+  /* styles.css */
+  .scrollbar {
+    /* Defina estilos globais para a barra de rolagem */
+    scrollbar-width: thin;
+    scrollbar-color: #4e82db #4e82db; /* Cor da barra e do thumb */
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem no Chrome/Safari */
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4e82db; /* Cor do thumb no Chrome/Safari */
+    border-radius: 6px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background-color: #4e82db; /* Cor da track no Chrome/Safari */
+  }
+
+  .thumb {
+    /* Estilos específicos para o polegar da barra de rolagem */
+    border-radius: 6px;
+  }
 }

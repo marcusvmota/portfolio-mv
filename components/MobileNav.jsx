@@ -11,20 +11,21 @@ const links = [
     path: "/",
   },
   {
-    name: "Services",
-    path: "/services",
+    name: "Serviços",
+    path: "/servicos",
   },
   {
-    name: "Resume",
-    path: "/resume",
+    name: "Sobre Mim",
+    path: "/resumo",
   },
   {
-    name: "Work",
-    path: "/work",
+    name: "Trabalhos",
+    path: "/trabalhos",
   },
+
   {
-    name: "Contact",
-    path: "/contact",
+    name: "Contato",
+    path: "/contato",
   },
 ];
 const MobileNav = () => {

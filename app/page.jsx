@@ -20,7 +20,7 @@ const Home = () => {
             </h1>
             <p className='max-w-[500px] mb-9 text-white/80'>
               Sou um desenvolvedor Front-End. Aqui você encontra alguns dos
-              principais projetos feito por mim e algumas informações de
+              principais projetos feitos por mim e algumas informações de
               contato.
             </p>
             {/* btn */}
