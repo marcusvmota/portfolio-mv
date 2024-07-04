@@ -15,7 +15,7 @@ import { SiTailwindcss, SiBootstrap } from "react-icons/si";
 const about = {
   title: "Informacão Pessoal",
   description:
-    "sou apaixonado por criar soluções criativas para problemas complexos. Estou sempre buscando maneiras de gerar resultados efetivos e inovadores. Além disso, sou um profissional dedicado, responsável e comprometido em aprender continuamente e evoluir minhas habilidades.",
+    "Sou apaixonado por criar soluções criativas para problemas complexos. Estou sempre buscando maneiras de gerar resultados efetivos e inovadores. Além disso, sou um profissional dedicado, responsável e comprometido em aprender continuamente e evoluir minhas habilidades.",
   info: [
     {
       fieldName: "Name",
@@ -152,17 +152,26 @@ const Resume = () => {
           defaultValue='experience'
           className='flex flex-col xl:flex-row gap-[60px] w-full  '
         >
-          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6'>
-            <TabsTrigger className='text-white' value='experience'>
+          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 '>
+            <TabsTrigger
+              className='text-white hover:text-accent  '
+              value='experience'
+            >
               Experiência
             </TabsTrigger>
-            <TabsTrigger className='text-white' value='education'>
+            <TabsTrigger
+              className='text-white hover:text-accent'
+              value='education'
+            >
               Educação
             </TabsTrigger>
-            <TabsTrigger className='text-white' value='skills'>
+            <TabsTrigger
+              className='text-white hover:text-accent'
+              value='skills'
+            >
               Habilidades
             </TabsTrigger>
-            <TabsTrigger className='text-white' value='about'>
+            <TabsTrigger className='text-white hover:text-accent' value='about'>
               Informações
             </TabsTrigger>
           </TabsList>
@@ -262,7 +271,7 @@ const Resume = () => {
                           <TooltipProvider delayDuration={100}>
                             <Tooltip>
                               <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex items-center justify-center group'>
-                                <div className='text-6xl group-hover:scale-110 transition-all duration-300'>
+                                <div className='text-6xl group-hover:text-accent transition-all duration-300'>
                                   {skill.icon}
                                 </div>
                               </TooltipTrigger>

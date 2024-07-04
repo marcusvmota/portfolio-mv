@@ -26,7 +26,7 @@ const info = [
 
   {
     icon: <FaPhoneAlt />,
-    title: "Phone",
+    title: "Whatsapp",
     description: "(83) 9 9851-8119",
   },
 ];

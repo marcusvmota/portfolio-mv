@@ -13,7 +13,7 @@ const services = [
   },
   {
     num: "02",
-    title: "UI/UX Design",
+    title: "UI/UX Designer",
     description:
       "Desenvolvimento de interfaces de usuário e experiências de usuário.",
     href: "",
