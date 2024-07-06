@@ -19,10 +19,10 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "Frontend",
+    category: "ZOTT Produções",
     title: "Portfolio",
     description:
-      "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.",
+      "Site desenvolvido para produtora de eventos para apresentar o seu trabalho e captar patrocinadores.",
     stack: [
       {
         name: "HTML",
@@ -33,45 +33,42 @@ const projects = [
       {
         name: "JavaScript",
       },
-      {
-        name: "React",
-      },
     ],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "https://github.com/marcusvinicius-dev",
+    image: "/assets/work/zott.jpg",
+    live: "https://glaysonbsantos.github.io/zott/index.html",
+    github: "https://github.com/marcusvmota/zott-producoes",
   },
 
   {
     num: "02",
-    category: "Frontend 2",
+    category: "Corretor Iago Queiroz",
     title: "Portfolio",
     description:
-      "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.",
+      "Site desenvolvido para o Corretor Iago Queiroz para divulgar casas, apartamentos e lotes.",
     stack: [
       {
-        name: "HTML",
+        name: "Wordpress",
       },
-      {
-        name: "CSS",
-      },
-      {
-        name: "JavaScript",
-      },
-      {
-        name: "React",
-      },
+      // {
+      //   name: "CSS",
+      // },
+      // {
+      //   name: "JavaScript",
+      // },
+      // {
+      //   name: "React",
+      // },
     ],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    github: "https://github.com/marcusvinicius-dev",
+    image: "/assets/work/iago.jpg",
+    live: "https://corretoriagoqueiroz.com/",
+    github: "https://github.com/marcusvmota",
   },
   {
     num: "03",
-    category: "Frontend 3",
+    category: "QuadroA4 Outlet",
     title: "Portfolio",
     description:
-      "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.",
+      "Aplicação desenvolvida como exercício para elaborar um site de produto ou serviço de e-commerce.",
     stack: [
       {
         name: "HTML",
@@ -82,13 +79,10 @@ const projects = [
       {
         name: "JavaScript",
       },
-      {
-        name: "React",
-      },
     ],
-    image: "/assets/work/thumb3.png",
-    live: "",
-    github: "https://github.com/marcusvinicius-dev",
+    image: "/assets/work/QUADROA4.jpg",
+    live: "https://marcusvmota.github.io/quadroA4-outlet/",
+    github: "https://github.com/marcusvmota/quadroA4-outlet",
   },
 ];
 const Work = () => {
@@ -118,7 +112,7 @@ const Work = () => {
               </div>
               {/* categoria */}
               <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>
-                {project.category} Project
+                {project.category}
               </h2>
               {/* descrição */}
               <p className='text-white/60'>{project.description}</p>
@@ -135,7 +129,7 @@ const Work = () => {
               <div className='border border-white/20'></div>
               {/* buttons */}
               <div className='flex gap-4 items-center'>
-                <Link href={project.live}>
+                <Link href={project.live} target='_blank'>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex items-center justify-center group'>
@@ -147,7 +141,7 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.github}>
+                <Link href={project.github} target='_blank'>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex items-center justify-center group'>
