@@ -8,43 +8,40 @@ import { CiMenuFries } from "react-icons/ci";
 const links = [
   {
     name: "Home",
-    path: "/",
+    path: "/"
   },
-  {
-    name: "Serviços",
-    path: "/services",
-  },
+
   {
     name: "Sobre Mim",
-    path: "/resume",
+    path: "/resume"
   },
   {
     name: "Trabalhos",
-    path: "/work",
+    path: "/work"
   },
 
   {
     name: "Contato",
-    path: "/contact",
-  },
+    path: "/contact"
+  }
 ];
 const MobileNav = () => {
   const pathname = usePathname();
   return (
     <Sheet>
-      <SheetTrigger className='flex justify-center items-center'>
-        <CiMenuFries className='text-[32px] text-accent' />
+      <SheetTrigger className="flex justify-center items-center">
+        <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
 
-      <SheetContent className='flex flex-col'>
-        <div className='mt-32 mb-20 text-center text-2xl'>
-          <Link href='/'>
-            <h1 className='text-4xl font-semibold'>
-              Marcus Vinicius<span className='text-accent'>.</span>
+      <SheetContent className="flex flex-col">
+        <div className="mt-32 mb-20 text-center text-2xl">
+          <Link href="/">
+            <h1 className="text-4xl font-semibold">
+              Marcus Vinicius<span className="text-accent">.</span>
             </h1>
           </Link>
         </div>
-        <nav className='flex flex-col gap-8 justify-center items-center '>
+        <nav className="flex flex-col gap-8 justify-center items-center ">
           {links.map((link, index) => {
             return (
               <Link
