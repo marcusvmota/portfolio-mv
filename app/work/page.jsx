@@ -115,37 +115,41 @@ const Work = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" }
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
+      className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0 overflow-x-hidden"
     >
-      <div className="container mx-auto ">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
-              {/* outline num */}
-              <div className="text-8xl leading-none font-extrabold text-outline text-transparent ">
+          {/* Seção de Informações do Projeto */}
+          <div className="w-full xl:w-1/2 xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+            <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 h-full">
+              {/* Número do Projeto */}
+              <div className="text-8xl sm:text-6xl md:text-4xl leading-none font-extrabold text-outline text-transparent">
                 {project?.num || "N/A"}
               </div>
-              {/* categoria */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+              {/* Categoria do Projeto */}
+              <h2 className="text-4xl sm:text-3xl md:text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
                 {project?.category || "Categoria Indefinida"}
               </h2>
-              {/* descrição */}
-              <p className="text-white/60">
+              {/* Descrição do Projeto */}
+              <p className="text-white/60 text-sm sm:text-base md:text-lg">
                 {project?.description || "Descrição não disponível."}
               </p>
-              {/* stack */}
-              <ul className="flex gap-4">
+              {/* Stack Tecnológico */}
+              <ul className="flex gap-2 sm:gap-4 flex-wrap">
                 {project?.stack?.map((item, index) => (
-                  <li key={index} className="text-xl text-accent">
+                  <li
+                    key={index}
+                    className="text-sm sm:text-xl text-accent break-words"
+                  >
                     {item.name}
                     {index !== project.stack.length - 1 && ","}
                   </li>
                 )) || "Stack não disponível."}
               </ul>
-              {/* borda */}
+              {/* Linha Divisória */}
               <div className="border border-white/20"></div>
-              {/* buttons */}
-              <div className="flex gap-4 items-center">
+              {/* Botões de Live e Github */}
+              <div className="flex gap-4 items-center flex-wrap">
                 {project?.live && (
                   <Link
                     href={project.live}
@@ -154,7 +158,7 @@ const Work = () => {
                   >
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex items-center justify-center group">
+                        <TooltipTrigger className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/5 flex items-center justify-center group">
                           <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                         </TooltipTrigger>
                         <TooltipContent className="z-50 overflow-hidden rounded-md border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-950 shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50">
@@ -172,7 +176,7 @@ const Work = () => {
                   >
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex items-center justify-center group">
+                        <TooltipTrigger className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/5 flex items-center justify-center group">
                           <BsGithub className="text-white text-3xl group-hover:text-accent" />
                         </TooltipTrigger>
                         <TooltipContent className="z-50 overflow-hidden rounded-md border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-950 shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50">
@@ -185,12 +189,28 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%]">
+
+          {/* Seção do Slider de Projetos */}
+          <div className="w-full xl:w-1/2">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
               className="xl:h-[520px] mb-12"
               onSlideChange={handleSlideChange}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 20
+                },
+                768: {
+                  slidesPerView: 1,
+                  spaceBetween: 30
+                },
+                1024: {
+                  slidesPerView: 1,
+                  spaceBetween: 30
+                }
+              }}
             >
               {projects.map((projectItem, index) => (
                 <SwiperSlide key={index} className="w-full">
@@ -198,13 +218,13 @@ const Work = () => {
                     href={projectItem.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block h-[460px] relative group flex justify-center items-center bg-pink-50/20 cursor-pointer"
+                    className="block h-[460px] relative group flex justify-center items-center bg-pink-50/20 cursor-pointer overflow-hidden"
                   >
-                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 "></div>
-                    <div className="relative w-full h-full ">
+                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                    <div className="relative w-full h-full max-w-full overflow-hidden">
                       <Image
                         src={projectItem.image}
-                        alt={projectItem.category} // Atualizado para usar uma propriedade existente
+                        alt={projectItem.category}
                         fill
                         className="object-cover"
                       />
@@ -213,8 +233,8 @@ const Work = () => {
                 </SwiperSlide>
               ))}
               <WorkSliderBtns
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full  justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all "
+                containerStyles="flex gap-2 absolute right-0 bottom-5 xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
               />
             </Swiper>
           </div>
